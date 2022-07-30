@@ -31,7 +31,7 @@ module.exports = {
         try {
             sails.log("inside find")
             // let filter = Object.assign({}, req ? req : {})
-            let data = await Product.find();
+            let data = await Product.find().populate('category');
             console.log("data", data);
             return res.ok(data);
 
@@ -45,7 +45,7 @@ module.exports = {
     async view(req, res) {
         try {
             console.log("req", req.params.id);
-            let data = await Product.findOne({ _id: req.params.id })
+            let data = await Product.findOne({ _id: req.params.id }).populate('category')
             console.log("data", data);
             return res.ok(data)
 

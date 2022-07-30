@@ -13,7 +13,9 @@ module.exports.routes = {
     'GET /find': 'ProductController.listing',
     'GET /findOne/:id': 'ProductController.view',
     'PUT /update/:id': 'ProductController.update',
-    'DELETE /delete/:id': 'ProductController.delete'
+    'DELETE /delete/:id': 'ProductController.delete',
+
+    'POST /create/category': 'CategoriesController.create',
 
 
 };
