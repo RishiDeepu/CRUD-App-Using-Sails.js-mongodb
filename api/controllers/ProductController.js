@@ -77,6 +77,9 @@ module.exports = {
         } catch (e) {
             return res.serverError(e)
         }
+    },
+    async test() {
+
     }
 
 };
