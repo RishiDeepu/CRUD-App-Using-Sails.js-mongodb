@@ -10,6 +10,7 @@ module.exports = {
         try {
             console.log(req.body);
             console.log("all params", req.allParams());
+            delete req.body.isUser;
 
             let product = await Product.create(req.body)
             // return res.ok(product)
